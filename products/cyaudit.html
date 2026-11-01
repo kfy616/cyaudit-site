@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CYAudit 审计系统 — 产品详情</title>
+  <meta name="description" content="CYAudit 审计系统产品详情：功能总览、适用场景、版本历史、下载与授权说明。">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header" data-mount="header"></header>
+
+  <!-- ═══════════ 详情页头部（模板复用区：换产品改这一屏 + 下方各节） ═══════════ -->
+  <section class="detail-hero">
+    <div class="container">
+      <span class="product-icon" style="background:#2563eb1a;color:#2563eb;">🧮</span>
+      <h1>CYAudit 审计系统</h1>
+      <p class="lead">把审计底稿装进 Excel —— 覆盖「建项 → 取数 → 调整 → 注释 → 报告」全流程的 Excel / WPS 插件。</p>
+      <div class="detail-meta">
+        <span class="badge">当前版本 v3.1</span>
+        <span class="badge">2026-11-01 更新</span>
+        <span class="badge">Excel 2016+ / WPS 12.x</span>
+        <span class="badge">闭源授权</span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#download">⬇ 下载安装包</a>
+        <a class="btn btn-ghost" href="../about.html">咨询 / 申请试用</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container prose" style="padding-top:8px;">
+
+    <!-- 概览 -->
+    <h2>产品概览</h2>
+    <p>
+      CYAudit 是面向中小会计师事务所与独立审计师的桌面端审计作业系统。它由 Excel/WPS 加载项、云端 Api 服务与按项目隔离的
+      MySQL 项目库组成：客户端负责读表、填表、算表，所有跨进程取数与写库经 Api 中继并按账号授权，本机无需安装数据库驱动。
+      项目管理、合并结构、未审数、调整分录、注释底稿与审计报告全部数据化，团队在同一项目库上协作，数字有源可溯。
+    </p>
+    <div class="screenshot-placeholder">【截图占位：CY审计选项卡 + 项目管理窗，建议 1600×700】</div>
+    <h3>产品操作介绍</h3>
+    <div class="video-placeholder" role="region" aria-label="CYAudit 产品操作介绍视频，视频待添加">
+      <div class="video-placeholder-content">
+        <span class="video-play-icon" aria-hidden="true">▶</span>
+        <p>产品操作介绍视频</p>
+        <span class="video-placeholder-note">视频待添加</span>
+      </div>
+    </div>
+
+    <!-- 功能 -->
+    <h2>功能总览（42 个功能按钮）</h2>
+    <h3>① 项目管理</h3>
+    <ul class="check-list">
+      <li>一键新建项目：建库（cy_单位_年度）+ 生成读取 / 调整 / 注释 / 报告四套底稿工作簿</li>
+      <li>项目维护与状态管理；用户管理（仅管理员）；按项目角色授权成员</li>
+    </ul>
+    <h3>② 读取系统（5 按钮）</h3>
+    <ul class="check-list">
+      <li>匹配报表项目：模板报表项目 ↔ 科目信息自动匹配，未匹配项标注「待确认」</li>
+      <li>获取文档路径 + 批量提取数据：递归扫描外部报表，NPOI 并行解析 BS / IS / CF / CE</li>
+      <li>勾稽校验：25 个勾稽科目按层级递归汇总，差异自动定位</li>
+      <li>上传数据：按 截止日 + 单位 + 科目 REPLACE 写入未审报表</li>
+    </ul>
+    <h3>③ 调整系统（15 按钮）</h3>
+    <ul class="check-list">
+      <li>上传单位清单 / 分部清单：合并范围唯一数据源，覆盖式入库</li>
+      <li>上传前期审定数 / 未审数 / 调整分录：借贷勾稽校验 + GUID 增量同步</li>
+      <li>查询 TB / FS / FS1 / conTB：支持「审计期初数」双口径与分部合并例程</li>
+      <li>批量导出：单位 × 工作表 → xlsx / PDF，合并或分拆，五步向导</li>
+    </ul>
+    <h3>④ 注释系统（17 按钮）</h3>
+    <ul class="check-list">
+      <li>注释目录驱动建表 / 改表：zs{表名} 幂等增量，不丢已录数据</li>
+      <li>上传当前 / 全部注释：四态计数（新增/更新/删除/未变动）可查漏</li>
+      <li>三种勾稽表：报表数 vs 注释数、合计 vs 明细、抵销数 vs 注释数</li>
+      <li>查询当前 / 多表注释、导入上期注释（期初自动衔接上年期末）</li>
+    </ul>
+    <h3>⑤ 报告生成系统（2 按钮）</h3>
+    <ul class="check-list">
+      <li>生成 Excel 注释：按单位复制母版并填值，合并单位自动切换合并模板</li>
+      <li>生成审计报告（Word）：封面 / 正文 / 目录 / 报表 / 附注五文档自动合并，占位符替换，模板格式零改动</li>
+    </ul>
+
+    <!-- 场景 -->
+    <h2>适用场景与目标用户</h2>
+    <div class="grid grid-2">
+      <div class="card"><h3 class="card-title">年报审计项目组</h3><p>3–10 人小团队共用项目库，谁改了什么操作日志全留痕。</p></div>
+      <div class="card"><h3 class="card-title">合并报表业务</h3><p>多层合并结构 + 抵销分录 + 合并 TB / 合并注释，自动展开层级。</p></div>
+      <div class="card"><h3 class="card-title">连续年度审计</h3><p>跨年项目一键导入上期注释，期初取数口径自动切换。</p></div>
+      <div class="card"><h3 class="card-title">Excel / WPS 双宿主</h3><p>WPS 环境通过独立宿主进程跑同一套功能，现场零门槛。</p></div>
+    </div>
+    <p style="margin-top:10px;"><b>目标用户：</b>中小会计师事务所 · 独立审计师 · 财务尽调团队 · 对底稿自动化有兴趣的 CPA。</p>
+
+    <!-- 技术亮点 -->
+    <h2>技术亮点</h2>
+    <ul class="check-list">
+      <li><b>纯桌面架构：</b>客户端不直连数据库，Api 中继 + 按账号签发专属 MySQL 凭据，物理级数据隔离</li>
+      <li><b>一项目一库：</b>权限天然收敛到库级别；归档 / 停用项目自动回收访问权</li>
+      <li><b>并行解析引擎：</b>外部报表多线程解析，失败自动 COM 兜底重试，单文件只打开一次</li>
+      <li><b>GUID 增量同步：</b>写库类操作快照比对只传差异，断点续写不重复、不丢行</li>
+      <li><b>三层权限门：</b>界面亮灰 / 入口宏守门 / 服务端硬校验同源判定（职级 + 项目角色双层）</li>
+      <li><b>WPS 兼容宿主：</b>托盘常驻进程 + jsaddons 选项卡，COM 适配层还原完整功能面</li>
+    </ul>
+    <p class="note-box">技术栈：C# / .NET 8–9 · Excel-DNA · ASP.NET Core 最小 API · MySQL · NPOI / ClosedXML / OpenXML SDK。</p>
+
+    <!-- 下载 -->
+    <h2 id="download">下载与安装</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3 class="card-title">⬇ 安装包</h3>
+        <p>CyAuditClientSetup.exe · 约 56.7 MB<br>
+           自动部署 Excel 加载项、WPS 宿主与 WPS 选项卡插件，默认下一步即可，无需管理员权限。<br>
+           安装后<b>完全退出并重启 Excel</b>，出现「CY审计」选项卡即成功。</p>
+        <div class="card-foot">
+          <span class="meta">当前版本 v3.1 · 2026-11-01</span>
+          <a class="btn btn-primary btn-sm" href="#">下载（【替换直链】）</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="card-title">📋 环境要求</h3>
+        <p>Windows 10 及以上<br>Microsoft Excel 2016+（或 WPS 表格 12.x）<br>可访问部署服务器的网络（默认云端口 5123）</p>
+      </div>
+    </div>
+
+    <!-- 版本历史 -->
+    <h2>版本历史</h2>
+    <table class="version-table">
+      <tr><th style="width:110px;">版本</th><th style="width:110px;">日期</th><th>要点</th></tr>
+      <tr><td>v3.1</td><td>2026-11-01</td><td>权限体系第四轮细化：用户管理仅管理员、项目授权按项目角色过滤、受控操作点击守门弹窗；添加成员交互优化。</td></tr>
+      <tr><td>v3.0</td><td>2026-10-31</td><td>职级体系重构（7 档）；WPS 宿主与选项卡全量落地；性能多轮提速。</td></tr>
+      <tr><td>v2.x</td><td>2026-08~09</td><td>三系统（读取 / 调整 / 注释）+ 报告生成成型，项目库多租户化。</td></tr>
+    </table>
+    <p class="ph">【按你的真实发布节奏补充版本历史】</p>
+
+    <!-- 授权 -->
+    <h2 id="license">开源协议 / 授权说明</h2>
+    <p>
+      CYAudit 当前为<b>闭源授权软件</b>：【按你的实际授权方式修改，示例：按项目库数量授权 / 年度订阅；
+      新用户可申请 30 天全功能试用；教育与非商业用途免费】。授权绑定账号而非机器，登录即验权。
+    </p>
+    <p>
+      本产品使用的第三方开源组件遵循其各自协议（Excel-DNA / Newtonsoft.Json / NPOI / ClosedXML / BCrypt 等），
+      详见安装目录内的第三方声明文件。
+    </p>
+    <div class="note-box">💬 需要报价、试用或定制？<a href="../about.html">查看联系方式 →</a></div>
+
+  </div>
+
+  <footer class="site-footer" data-mount="footer"></footer>
+  <script src="../assets/js/site-config.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
