@@ -65,10 +65,12 @@ window.SITE = {
       license:
         "当前为闭源授权软件：付费授权 + 免费试用。【按你的实际授权方式修改，例如：个人非商业免费 / 按项目库授权 / 年度订阅】",
       download: {
-        url: "#", // 【替换为安装包下载直链（网盘/OSS/GitHub Releases）】
+        // GitHub Releases「最新版」固定链接：以后发新 Release 链接不变，网站无需改动
+        url: "https://github.com/kfy616/cyaudit-release/releases/latest/download/CyAuditClientSetup.exe",
         fileName: "CyAuditClientSetup.exe",
         size: "56.7 MB",
         requirement: "Windows 10+ · Excel 2016+ 或 WPS 表格 12.x",
+        sha256: "256157BEC8EB832B1F4E0EC0CFFB1E2E34A061883FA4322E4DF231E4A4F5BA31",
       },
     },
     {
