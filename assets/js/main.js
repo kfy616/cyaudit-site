@@ -59,10 +59,18 @@
       '<div class="footer-brand">' + SITE.owner.name + " — " + SITE.owner.title + "</div>" +
       '<div class="footer-links">' + links + "</div>" +
       '<div class="footer-meta">© <span id="year"></span> ' + SITE.owner.name +
-      ' · <a href="mailto:' + SITE.owner.email + '">' + SITE.owner.email + "</a></div>" +
+      ' · <a href="mailto:' + SITE.owner.email + '">' + SITE.owner.email + "</a>" +
+      icpHtml() + "</div>" +
       "</div>";
     var y = document.getElementById("year");
     if (y) y.textContent = new Date().getFullYear();
+  }
+
+  /* ---------- 备案号（占位或未填写则不显示） ---------- */
+  function icpHtml() {
+    var icp = (SITE.owner.icp || "").trim();
+    if (!icp || icp.indexOf("【") >= 0) return "";
+    return ' · <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener nofollow">' + icp + "</a>";
   }
 
   /* ---------- 产品卡片 ---------- */
