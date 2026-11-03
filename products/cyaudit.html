@@ -39,71 +39,209 @@
       MySQL 项目库组成：客户端负责读表、填表、算表，所有跨进程取数与写库经 Api 中继并按账号授权，本机无需安装数据库驱动。
       项目管理、合并结构、未审数、调整分录、注释底稿与审计报告全部数据化，团队在同一项目库上协作，数字有源可溯。
     </p>
-    <div class="screenshot-placeholder">【截图占位：CY审计选项卡 + 项目管理窗，建议 1600×700】</div>
-    <h3>产品操作介绍</h3>
-    <div class="video-placeholder" role="region" aria-label="CYAudit 产品操作介绍视频，视频待添加">
-      <div class="video-placeholder-content">
-        <span class="video-play-icon" aria-hidden="true">▶</span>
-        <p>产品操作介绍视频</p>
-        <span class="video-placeholder-note">视频待添加</span>
-      </div>
-    </div>
-
+    <figure class="product-screenshot">
+      <img src="../assets/images/cyaudit-project-management.png" alt="CY审计 Excel 选项卡及项目管理窗口">
+      <figcaption>CY审计 Excel 选项卡与项目管理窗口</figcaption>
+    </figure>
     <!-- 功能 -->
-    <h2>功能总览（42 个功能按钮）</h2>
-    <h3>① 项目管理</h3>
-    <ul class="check-list">
-      <li>一键新建项目：建库（cy_单位_年度）+ 生成读取 / 调整 / 注释 / 报告四套底稿工作簿</li>
-      <li>项目维护与状态管理；用户管理（仅管理员）；按项目角色授权成员</li>
-    </ul>
-    <h3>② 读取系统（5 按钮）</h3>
-    <ul class="check-list">
-      <li>匹配报表项目：模板报表项目 ↔ 科目信息自动匹配，未匹配项标注「待确认」</li>
-      <li>获取文档路径 + 批量提取数据：递归扫描外部报表，NPOI 并行解析 BS / IS / CF / CE</li>
-      <li>勾稽校验：25 个勾稽科目按层级递归汇总，差异自动定位</li>
-      <li>上传数据：按 截止日 + 单位 + 科目 REPLACE 写入未审报表</li>
-    </ul>
-    <h3>③ 调整系统（15 按钮）</h3>
-    <ul class="check-list">
-      <li>上传单位清单 / 分部清单：合并范围唯一数据源，覆盖式入库</li>
-      <li>上传前期审定数 / 未审数 / 调整分录：借贷勾稽校验 + GUID 增量同步</li>
-      <li>查询 TB / FS / FS1 / conTB：支持「审计期初数」双口径与分部合并例程</li>
-      <li>批量导出：单位 × 工作表 → xlsx / PDF，合并或分拆，五步向导</li>
-    </ul>
-    <h3>④ 注释系统（17 按钮）</h3>
-    <ul class="check-list">
-      <li>注释目录驱动建表 / 改表：zs{表名} 幂等增量，不丢已录数据</li>
-      <li>上传当前 / 全部注释：四态计数（新增/更新/删除/未变动）可查漏</li>
-      <li>三种勾稽表：报表数 vs 注释数、合计 vs 明细、抵销数 vs 注释数</li>
-      <li>查询当前 / 多表注释、导入上期注释（期初自动衔接上年期末）</li>
-    </ul>
-    <h3>⑤ 报告生成系统（2 按钮）</h3>
-    <ul class="check-list">
-      <li>生成 Excel 注释：按单位复制母版并填值，合并单位自动切换合并模板</li>
-      <li>生成审计报告（Word）：封面 / 正文 / 目录 / 报表 / 附注五文档自动合并，占位符替换，模板格式零改动</li>
-    </ul>
+    <section class="feature-overview" aria-labelledby="feature-overview-title">
+      <div class="feature-overview-heading">
+        <div>
+          <span class="eyebrow">42 个功能按钮 · 5 个作业阶段</span>
+          <h2 id="feature-overview-title">功能总览</h2>
+          <p>从建立项目到交付报告，审计流程清晰衔接、数据全程留痕。</p>
+        </div>
+        <span class="feature-overview-mark" aria-hidden="true">CY / WORKFLOW</span>
+      </div>
+      <ol class="feature-flow" aria-label="审计作业流程">
+        <li><span>01</span>建项</li>
+        <li><span>02</span>取数</li>
+        <li><span>03</span>调整</li>
+        <li><span>04</span>注释</li>
+        <li><span>05</span>报告</li>
+      </ol>
+      <div class="feature-cards">
+        <article class="feature-card">
+          <div class="feature-card-top">
+            <span class="feature-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3"></rect><path d="M8 9h8M8 13h5M8 17h3"></path><path d="M16 15v4M14 17h4"></path></svg>
+            </span>
+            <span class="feature-card-count">01 / 项目</span>
+          </div>
+          <h3>项目管理</h3>
+          <p>一键创建项目库与四套底稿工作簿；维护项目资料、成员和角色权限。</p>
+          <div class="feature-tags"><span>一键建项</span><span>成员协作</span><span>权限管理</span></div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-card-top">
+            <span class="feature-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M5 4h14v16H5z"></path><path d="M8 8h8M8 12h8M8 16h4"></path><path d="m15 16 2 2 4-5"></path></svg>
+            </span>
+            <span class="feature-card-count">02 / 读取</span>
+          </div>
+          <h3>读取系统 <small>5 项功能</small></h3>
+          <p>匹配报表项目、批量读取 BS / IS / CF / CE，并完成勾稽校验与未审数入库。</p>
+          <div class="feature-tags"><span>批量取数</span><span>勾稽校验</span><span>未审数入库</span></div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-card-top">
+            <span class="feature-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M7 3v6M17 3v6M5 11h14v9H5z"></path><path d="m8 16 2 2 5-5"></path></svg>
+            </span>
+            <span class="feature-card-count">03 / 调整</span>
+          </div>
+          <h3>调整系统 <small>15 项功能</small></h3>
+          <p>维护合并结构、上传审定数与调整分录，并查询 TB / FS / conTB，支持批量导出。</p>
+          <div class="feature-tags"><span>分录同步</span><span>报表查询</span><span>Excel / PDF</span></div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-card-top">
+            <span class="feature-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M6 4h12a2 2 0 0 1 2 2v14H4V6a2 2 0 0 1 2-2Z"></path><path d="M8 8h8M8 12h8M8 16h4"></path><path d="M16 15v5"></path></svg>
+            </span>
+            <span class="feature-card-count">04 / 注释</span>
+          </div>
+          <h3>注释系统 <small>17 项功能</small></h3>
+          <p>由注释目录创建底稿，增量上传与查询，提供报表、明细和抵销等多种勾稽。</p>
+          <div class="feature-tags"><span>目录建表</span><span>增量同步</span><span>数据勾稽</span></div>
+        </article>
+        <article class="feature-card feature-card-report">
+          <div class="feature-card-top">
+            <span class="feature-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M6 3h8l4 4v14H6z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path><path d="m3 11 2 2 3-4"></path></svg>
+            </span>
+            <span class="feature-card-count">05 / 交付</span>
+          </div>
+          <h3>报告生成 <small>2 项功能</small></h3>
+          <p>生成 Excel 注释副本，并自动整合 Word 审计报告，减少重复整理与排版。</p>
+          <div class="feature-tags"><span>Excel 注释</span><span>Word 报告</span></div>
+        </article>
+      </div>
+    </section>
 
-    <!-- 场景 -->
-    <h2>适用场景与目标用户</h2>
-    <div class="grid grid-2">
-      <div class="card"><h3 class="card-title">年报审计项目组</h3><p>3–10 人小团队共用项目库，谁改了什么操作日志全留痕。</p></div>
-      <div class="card"><h3 class="card-title">合并报表业务</h3><p>多层合并结构 + 抵销分录 + 合并 TB / 合并注释，自动展开层级。</p></div>
-      <div class="card"><h3 class="card-title">连续年度审计</h3><p>跨年项目一键导入上期注释，期初取数口径自动切换。</p></div>
-      <div class="card"><h3 class="card-title">Excel / WPS 双宿主</h3><p>WPS 环境通过独立宿主进程跑同一套功能，现场零门槛。</p></div>
-    </div>
-    <p style="margin-top:10px;"><b>目标用户：</b>中小会计师事务所 · 独立审计师 · 财务尽调团队 · 对底稿自动化有兴趣的 CPA。</p>
+    <!-- 场景 / 用户（同步首页内容） -->
+    <section class="scenario-audience">
+      <div class="two-col">
+        <div>
+          <span class="eyebrow">适用场景</span>
+          <h2 style="font-size:22px;margin-bottom:18px;">它为谁而生</h2>
+          <div class="scenario"><h3>年报审计项目组</h3><p>3–10 人小团队共用一套项目库，底稿同源不抄错数。</p></div>
+          <div class="scenario"><h3>合并报表业务</h3><p>多层合并结构 + 抵销分录 + 合并 TB / 合并注释，自动展开层级。</p></div>
+          <div class="scenario"><h3>连续年度审计</h3><p>一键导入上期注释，期初数自动衔接上年期末。</p></div>
+          <div class="scenario"><h3>Excel / WPS 双宿主</h3><p>客户机器只有 WPS 也能跑完整流程，功能与 Excel 完全一致。</p></div>
+        </div>
+        <div>
+          <span class="eyebrow">目标用户</span>
+          <h2 style="font-size:22px;margin-bottom:18px;">他们已经在用</h2>
+          <div class="chips">
+            <span class="chip">中小会计师事务所</span>
+            <span class="chip">独立审计师</span>
+            <span class="chip">财务尽调团队</span>
+            <span class="chip">项目现场财务负责人</span>
+            <span class="chip">对底稿自动化有兴趣的 CPA</span>
+          </div>
+          <div class="note-box" style="margin-top:24px;">
+            💡 想了解 CYAudit 是否适合你的团队？<a href="../about.html">联系我</a>，可安排 30 分钟在线演示。
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- 技术亮点 -->
-    <h2>技术亮点</h2>
-    <ul class="check-list">
-      <li><b>纯桌面架构：</b>客户端不直连数据库，Api 中继 + 按账号签发专属 MySQL 凭据，物理级数据隔离</li>
-      <li><b>一项目一库：</b>权限天然收敛到库级别；归档 / 停用项目自动回收访问权</li>
-      <li><b>并行解析引擎：</b>外部报表多线程解析，失败自动 COM 兜底重试，单文件只打开一次</li>
-      <li><b>GUID 增量同步：</b>写库类操作快照比对只传差异，断点续写不重复、不丢行</li>
-      <li><b>三层权限门：</b>界面亮灰 / 入口宏守门 / 服务端硬校验同源判定（职级 + 项目角色双层）</li>
-      <li><b>WPS 兼容宿主：</b>托盘常驻进程 + jsaddons 选项卡，COM 适配层还原完整功能面</li>
-    </ul>
-    <p class="note-box">技术栈：C# / .NET 8–9 · Excel-DNA · ASP.NET Core 最小 API · MySQL · NPOI / ClosedXML / OpenXML SDK。</p>
+    <section class="tech-overview" aria-labelledby="tech-overview-title">
+      <div class="tech-overview-heading">
+        <div>
+          <span class="eyebrow">架构 · 性能 · 安全</span>
+          <h2 id="tech-overview-title">技术亮点</h2>
+          <p>围绕桌面端审计作业，兼顾数据隔离、处理效率与多宿主兼容。</p>
+        </div>
+        <span class="tech-stack-mark">.NET · EXCEL-DNA · MYSQL</span>
+      </div>
+      <div class="tech-cards">
+        <article class="tech-card">
+          <span class="tech-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="12" rx="2"></rect><path d="M8 21h8M12 17v4M8 9h8M8 13h4"></path></svg></span>
+          <span class="tech-card-index">01 / 架构</span>
+          <h3>纯桌面架构</h3>
+          <p>客户端不直连数据库，所有读写经 Api 中继与授权，终端无需安装数据库驱动。</p>
+          <span class="tech-card-foot">Excel / WPS · Api · MySQL</span>
+        </article>
+        <article class="tech-card">
+          <span class="tech-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="5" rx="8" ry="3"></ellipse><path d="M4 5v7c0 1.7 3.6 3 8 3 1.3 0 2.6-.1 3.7-.4M20 5v5M4 12v7c0 1.7 3.6 3 8 3M17 15v7M13.5 18.5H21"></path></svg></span>
+          <span class="tech-card-index">02 / 隔离</span>
+          <h3>一项目一库</h3>
+          <p>每个审计项目独立使用项目库，授权范围清晰；归档或停用项目可回收访问权。</p>
+          <span class="tech-card-foot">项目级数据边界</span>
+        </article>
+        <article class="tech-card">
+          <span class="tech-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 18V6M4 18h17M8 15l3-4 3 2 5-7"></path><path d="M16 6h3v3"></path></svg></span>
+          <span class="tech-card-index">03 / 性能</span>
+          <h3>并行解析引擎</h3>
+          <p>外部报表并行解析，每个文件只打开一次；解析异常时自动使用 COM 兜底重试。</p>
+          <span class="tech-card-foot">并行处理 · 失败重试</span>
+        </article>
+        <article class="tech-card">
+          <span class="tech-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3 5 6v5c0 4.5 2.8 8.3 7 10 4.2-1.7 7-5.5 7-10V6l-7-3Z"></path><path d="m9 12 2 2 4-4"></path></svg></span>
+          <span class="tech-card-index">04 / 同步</span>
+          <h3>GUID 增量同步</h3>
+          <p>按行标识比对数据快照，仅提交新增、更新或删除的差异，减少重复传输。</p>
+          <span class="tech-card-foot">差异同步 · 可追溯</span>
+        </article>
+        <article class="tech-card">
+          <span class="tech-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="10" width="14" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 1 1 8 0v3M12 14v3"></path></svg></span>
+          <span class="tech-card-index">05 / 安全</span>
+          <h3>三层权限校验</h3>
+          <p>界面状态、操作入口和服务端按同一规则校验，结合职级与项目角色控制权限。</p>
+          <span class="tech-card-foot">界面 · 客户端 · 服务端</span>
+        </article>
+        <article class="tech-card">
+          <span class="tech-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4M7 8h4v5H7zM14 8h3M14 11h3M14 14h3"></path></svg></span>
+          <span class="tech-card-index">06 / 兼容</span>
+          <h3>WPS 兼容宿主</h3>
+          <p>通过独立宿主进程与 COM 适配层，为 WPS 提供与 Excel 一致的核心作业能力。</p>
+          <span class="tech-card-foot">WPS 宿主 · jsaddons</span>
+        </article>
+      </div>
+      <p class="note-box tech-stack-note">技术栈：C# / .NET 8–9 · Excel-DNA · ASP.NET Core 最小 API · MySQL · NPOI / ClosedXML / OpenXML SDK。</p>
+    </section>
+
+    <h2>产品操作介绍</h2>
+    <div class="tutorial-actions">
+      <a class="btn btn-ghost btn-sm" href="cyaudit-manual.html">📖 查看操作手册</a>
+    </div>
+    <div class="tutorial-layout">
+      <nav class="tutorial-nav" aria-label="产品操作视频目录">
+        <p class="tutorial-nav-title">操作目录 <span class="tutorial-count">9 个视频</span></p>
+        <ol class="tutorial-nav-list">
+          <li><button class="tutorial-nav-item active" type="button" aria-pressed="true" data-title="安装与登录" data-description="安装 CYAudit 客户端并完成登录。" data-video-src="../assets/videos/tutorials/1安装与登录.mp4"><span>1</span>安装与登录</button></li>
+          <li><button class="tutorial-nav-item" type="button" aria-pressed="false" data-title="项目新建" data-description="新建审计项目并完成基础设置。" data-video-src="../assets/videos/tutorials/2项目新建.mp4"><span>2</span>项目新建</button></li>
+          <li><button class="tutorial-nav-item" type="button" aria-pressed="false" data-title="配置项目组成员" data-description="为项目添加成员并配置协作权限。" data-video-src="../assets/videos/tutorials/3配置项目组成员.mp4"><span>3</span>配置项目组成员</button></li>
+          <li><button class="tutorial-nav-item" type="button" aria-pressed="false" data-title="上传单位清单和分部清单" data-description="维护并上传审计单位及分部清单。" data-video-src="../assets/videos/tutorials/4上传单位清单和分部清单.mp4"><span>4</span>上传单位清单和分部清单</button></li>
+          <li><button class="tutorial-nav-item" type="button" aria-pressed="false" data-title="未审数据导入-conTB取数" data-description="通过 conTB 流程导入未审数据。" data-video-src="../assets/videos/tutorials/5.1未审数据导入-conTB取数.mp4"><span>5.1</span>未审数据导入-conTB取数</button></li>
+          <li><button class="tutorial-nav-item" type="button" aria-pressed="false" data-title="未审数据导入-报表读取系统取数" data-description="通过报表读取系统导入未审数据。" data-video-src="../assets/videos/tutorials/5.2未审数据导入-报表读取系统取数.mp4"><span>5.2</span>未审数据导入-报表读取系统取数</button></li>
+          <li><button class="tutorial-nav-item" type="button" aria-pressed="false" data-title="审计调整录入及查询" data-description="录入审计调整并查询调整结果。" data-video-src="../assets/videos/tutorials/6审计调整录入及查询.mp4"><span>6</span>审计调整录入及查询</button></li>
+          <li><button class="tutorial-nav-item" type="button" aria-pressed="false" data-title="生成conTB及批量导出TB" data-description="生成 conTB 并批量导出 TB 数据。" data-video-src="../assets/videos/tutorials/7生成conTB及批量导出TB.mp4"><span>7</span>生成conTB及批量导出TB</button></li>
+          <li><button class="tutorial-nav-item" type="button" aria-pressed="false" data-title="注释系统创建、填写及查询" data-description="创建注释底稿，填写内容并查询结果。" data-video-src="../assets/videos/tutorials/8注释系统创建、填写及查询.mp4"><span>8</span>注释系统创建、填写及查询</button></li>
+        </ol>
+      </nav>
+      <section class="tutorial-viewer" aria-label="视频播放区域">
+        <div class="tutorial-viewer-heading">
+          <div>
+            <span class="tutorial-current-step">第 01 步</span>
+            <h3 class="tutorial-current-title">安装与登录</h3>
+          </div>
+          <span class="tutorial-video-status">操作教程</span>
+        </div>
+        <p class="tutorial-current-description">安装 CYAudit 客户端并完成登录。</p>
+        <div class="tutorial-player-shell">
+          <video class="tutorial-player" controls preload="metadata" aria-label="产品操作教程视频" hidden></video>
+          <div class="tutorial-empty">
+            <span class="video-play-icon" aria-hidden="true">▶</span>
+            <p>本章节视频正在准备中</p>
+            <span class="video-placeholder-note">添加视频地址后即可在此播放</span>
+          </div>
+        </div>
+      </section>
+    </div>
 
     <!-- 下载 -->
     <h2 id="download">下载与安装</h2>

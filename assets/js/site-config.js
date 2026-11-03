@@ -11,7 +11,7 @@ window.SITE = {
     bio: "8 年执业注册会计师，白天做审计，晚上写代码。相信审计行业的效率革命不会来自大而全的 ERP，而来自一线审计师手里顺手的小工具。",
     avatarText: "ME",
     email: "710365970@qq.com",
-    github: "https://github.com/yourname",
+    github: "https://github.com/kfy616",
     wechat: "15759956011",
     location: "福建·福州",
     // 备案号（ICP 备案通过后替换为「闽ICP备XXXXXXXX号」等；保持占位则页脚不显示）

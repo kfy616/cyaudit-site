@@ -132,10 +132,61 @@
     if (mail) mail.href = "mailto:" + o.email;
   }
 
+  /* ---------- 产品操作视频 ---------- */
+  function initTutorials() {
+    var nav = document.querySelector(".tutorial-nav-list");
+    var player = document.querySelector(".tutorial-player");
+    var empty = document.querySelector(".tutorial-empty");
+    var step = document.querySelector(".tutorial-current-step");
+    var title = document.querySelector(".tutorial-current-title");
+    var description = document.querySelector(".tutorial-current-description");
+    var count = document.querySelector(".tutorial-count");
+    if (!nav || !player || !empty || !step || !title || !description) return;
+
+    if (count) count.textContent = nav.querySelectorAll(".tutorial-nav-item").length + " 个视频";
+
+    function selectTutorial(item) {
+      Array.prototype.forEach.call(nav.querySelectorAll(".tutorial-nav-item"), function (navItem) {
+        var active = navItem === item;
+        navItem.classList.toggle("active", active);
+        navItem.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+
+      step.textContent = "第 " + item.querySelector("span").textContent + " 步";
+      title.textContent = item.getAttribute("data-title");
+      description.textContent = item.getAttribute("data-description");
+
+      var videoSrc = item.getAttribute("data-video-src");
+      player.pause();
+      if (videoSrc) {
+        player.src = videoSrc;
+        player.hidden = false;
+        empty.hidden = true;
+        player.load();
+      } else {
+        player.removeAttribute("src");
+        player.load();
+        player.hidden = true;
+        empty.hidden = false;
+      }
+    }
+
+    nav.addEventListener("click", function (event) {
+      var target = event.target;
+      var item = target.closest ? target.closest(".tutorial-nav-item") : null;
+      if (!item || !nav.contains(item)) return;
+      selectTutorial(item);
+    });
+
+    var activeItem = nav.querySelector(".tutorial-nav-item.active") || nav.querySelector(".tutorial-nav-item");
+    if (activeItem) selectTutorial(activeItem);
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     renderHeader();
     renderFooter();
     renderProductGrids();
     renderAbout();
+    initTutorials();
   });
 })();
