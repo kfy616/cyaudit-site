@@ -14,8 +14,8 @@ window.SITE = {
     github: "https://github.com/kfy616",
     wechat: "15759956011",
     location: "福建·福州",
-    // 备案号（ICP 备案通过后替换为「闽ICP备XXXXXXXX号」等；保持占位则页脚不显示）
-    icp: "【备案号占位：闽ICP备XXXXXXXX号】",
+    // ICP 备案号（工信部已通过；页脚自动显示可点击链接跳转到工信部）
+    icp: "闽ICP备2026046977号-1",
   },
 
   /* 出现在导航与页脚 */
