@@ -67,8 +67,9 @@ window.SITE = {
       license:
         "当前为闭源授权软件：付费授权 + 免费试用。【按你的实际授权方式修改，例如：个人非商业免费 / 按项目库授权 / 年度订阅】",
       download: {
-        // GitHub Releases「最新版」固定链接：以后发新 Release 链接不变，网站无需改动
-        url: "https://github.com/kfy616/cyaudit-release/releases/latest/download/CyAuditClientSetup.exe",
+        // 阿里云 CDN 下载地址（2026-11-26 起由 GitHub Releases 迁出，国内直连更快）
+        // 发新版本时：上传新 exe 覆盖同名文件即可，链接不变；记得同步更新下方 sha256 与 size
+        url: "https://kfengyu.com/downloads/CyAuditClientSetup.exe",
         fileName: "CyAuditClientSetup.exe",
         size: "56.7 MB",
         requirement: "Windows 10+ · Excel 2016+ 或 WPS 表格 12.x",
